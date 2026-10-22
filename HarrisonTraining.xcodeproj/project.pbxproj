@@ -6,6 +6,21 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84B9F26E3089FFBF00E1F312 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84B9F26D3089FFBF00E1F312 /* FactoryKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84B9F281308A030C00E1F312 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = Frameworks;
+			files = (
+			);
+			name = "Embed Frameworks";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		84B9F2543089F6D500E1F312 /* HarrisonTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarrisonTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -22,6 +37,7 @@
 		84B9F2513089F6D500E1F312 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				84B9F26E3089FFBF00E1F312 /* FactoryKit in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				84B9F2563089F6D500E1F312 /* HarrisonTraining */,
+				84B9F27D308A030C00E1F312 /* Frameworks */,
 				84B9F2553089F6D500E1F312 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +60,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		84B9F27D308A030C00E1F312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -53,6 +77,7 @@
 				84B9F2503089F6D500E1F312 /* Sources */,
 				84B9F2513089F6D500E1F312 /* Frameworks */,
 				84B9F2523089F6D500E1F312 /* Resources */,
+				84B9F281308A030C00E1F312 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -60,6 +85,11 @@
 				84B9F2563089F6D500E1F312 /* HarrisonTraining */,
 			);
 			name = HarrisonTraining;
+			packageProductDependencies = (
+				84B9F26D3089FFBF00E1F312 /* FactoryKit */,
+				84B9F2713089FFBF00E1F312 /* FactoryTesting */,
+				84B9F27E308A030C00E1F312 /* FactoryKitDynamic */,
+			);
 			productName = HarrisonTraining;
 			productReference = 84B9F2543089F6D500E1F312 /* HarrisonTraining.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +118,9 @@
 			);
 			mainGroup = 84B9F24B3089F6D500E1F312;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84B9F2553089F6D500E1F312 /* Products */;
 			projectDirPath = "";
@@ -316,6 +349,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84B9F26D3089FFBF00E1F312 /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+		84B9F2713089FFBF00E1F312 /* FactoryTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryTesting;
+		};
+		84B9F27E308A030C00E1F312 /* FactoryKitDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKitDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84B9F24C3089F6D500E1F312 /* Project object */;
 	validationLevel = 1;
