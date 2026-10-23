@@ -27,15 +27,14 @@ nonisolated final class LoginViewModel: ObservableObject {
         isLoading = true
         
         do {
-            let loginResponse: LoginResponse = try await authRepository
-                .login(username: username, password: password)
+            let loginResponse: LoginResponse = try await authRepository.login(username: username, password: password)
             
             try await userRepository.saveUser(loginResponse.toUserModel())
             
             if(try userRepository.hasUser()) { isLoggedIn = true }
         } catch {
             isError = ErrorModel(message: error.localizedDescription)
-            print("Failed to fetch cards: \(error)")
+            print("Error: \(error)")
         }
         
         isLoading = false

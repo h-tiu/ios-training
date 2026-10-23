@@ -10,7 +10,9 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationView {
-            LoginView()
+            VStack {
+                Text("You are logged in")
+            }
         }
     }
 }

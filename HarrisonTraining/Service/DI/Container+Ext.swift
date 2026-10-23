@@ -32,4 +32,10 @@ extension Container {
             LoginViewModel()
         }
     }
+    
+    var launcherViewModel: Factory<LauncherViewModel> {
+        self {
+            LauncherViewModel()
+        }
+    }
 }
