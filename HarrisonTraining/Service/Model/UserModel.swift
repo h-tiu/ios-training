@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel: Codable,Identifiable {
+nonisolated struct UserModel: Codable, Identifiable {
     let id: Int
     let username: String
     let email: String

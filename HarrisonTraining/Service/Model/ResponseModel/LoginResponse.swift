@@ -20,6 +20,14 @@ struct LoginResponse: Codable, Identifiable {
 
 extension LoginResponse {
     func toUserModel() -> UserModel {
-        return UserModel(from: <#any Decoder#>)
+        UserModel(
+            id: id,
+            username: username,
+            email: email,
+            firstName: firstName,
+            lastName: lastName,
+            image: image,
+            session: SessionModel(accessToken: accessToken, refreshToken: refreshToken)
+        )
     }
 }

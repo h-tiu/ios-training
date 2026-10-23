@@ -15,6 +15,12 @@ extension Container {
         .singleton
     }
     
+    var userRepository: Factory<UserRepository> {
+        self {
+            UserRepository()
+        }
+    }
+    
     var authRepository: Factory<AuthRepository> {
         self {
             AuthRepository()

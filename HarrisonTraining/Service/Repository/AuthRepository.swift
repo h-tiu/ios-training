@@ -23,7 +23,6 @@ nonisolated final class AuthRepository {
             body: body
         )
     }
-    
 }
 
 
