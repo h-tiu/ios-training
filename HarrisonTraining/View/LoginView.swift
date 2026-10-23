@@ -6,25 +6,28 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct LoginView: View {
+    @Injected(\.loginViewModel) private var viewModel: LoginViewModel
     @State private var userName: String = ""
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            TextField("Username", text: $userName).hStyle()
-            SecureField("Password", text: $password).hStyle()
-            Button("Login") {
-                // Handle login
-            }.hStyle()
-            Spacer().frame(height: 10).padding(.top, 2)
-            Button("Register") {
-                // Handle registration
+        NavigationStack {
+            VStack {
+                TextField("Username", text: $userName).hStyle()
+                SecureField("Password", text: $password).hStyle()
+                Button("Login") {
+                    Task {
+                        await viewModel.login()
+                    }
+                }.hStyle()
+                Spacer().frame(height: 10).padding(.top, 2)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
     }
 }
 

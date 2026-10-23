@@ -17,3 +17,9 @@ struct LoginResponse: Codable, Identifiable {
     let accessToken: String
     let refreshToken: String
 }
+
+extension LoginResponse {
+    func toUserModel() -> UserModel {
+        return UserModel(from: <#any Decoder#>)
+    }
+}

@@ -15,9 +15,15 @@ extension Container {
         .singleton
     }
     
-    var authService: Factory<AuthService> {
+    var authRepository: Factory<AuthRepository> {
         self {
-            AuthService()
+            AuthRepository()
+        }
+    }
+    
+    var loginViewModel: Factory<LoginViewModel> {
+        self {
+            LoginViewModel()
         }
     }
 }

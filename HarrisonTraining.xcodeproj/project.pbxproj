@@ -87,8 +87,6 @@
 			name = HarrisonTraining;
 			packageProductDependencies = (
 				84B9F26D3089FFBF00E1F312 /* FactoryKit */,
-				84B9F2713089FFBF00E1F312 /* FactoryTesting */,
-				84B9F27E308A030C00E1F312 /* FactoryKitDynamic */,
 			);
 			productName = HarrisonTraining;
 			productReference = 84B9F2543089F6D500E1F312 /* HarrisonTraining.app */;
@@ -366,16 +364,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = FactoryKit;
-		};
-		84B9F2713089FFBF00E1F312 /* FactoryTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = FactoryTesting;
-		};
-		84B9F27E308A030C00E1F312 /* FactoryKitDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84B9F26C3089FFBF00E1F312 /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = FactoryKitDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
